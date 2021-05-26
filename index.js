@@ -20,7 +20,11 @@ var config = {
 
 axios(config)
 .then(function (response) {
-	console.log(response.data);
+	  console.log(response.data);
+})
+.catch(function (error) {
+  console.log(error);
+});
     console.log("running a task every 5 second");
 });
   
