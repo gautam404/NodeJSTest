@@ -28,4 +28,4 @@ axios(config)
     console.log("running a task every 7 second");
 });
   
-app.listen(3000);
+app.listen(process.env.PORT || 5000);
