@@ -4,12 +4,9 @@ const express = require("express");
 app = express(); // Initializing app
   
 // Creating a cron job which runs on every 10 second
-cron.schedule("*/7 * * * * *", function() {
+cron.schedule("*/5 * * * * *", function() {
 	var axios = require('axios');
-const now = new Date((new Date()).getTime() + 1000 * 3600 * 18);
-    const day = ("0" + now.getDate()).slice(-2);
-    const month = ("0" + (now.getMonth() + 1)).slice(-2);
-    const today = (day) +"-" + (month) +"-"+now.getFullYear() ;
+
 var config = {
   method: 'get',
   url: 'http://3.108.87.80/covid.php',
@@ -25,7 +22,7 @@ axios(config)
 .catch(function (error) {
   console.log(error);
 });
-    console.log("running a task every 7 second");
+    console.log("running a task every 5 second");
 });
   
 app.listen(process.env.PORT || 5000);
