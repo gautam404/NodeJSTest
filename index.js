@@ -9,7 +9,7 @@ cron.schedule("*/6 * * * * *", function() {
 
 	var config = {
 	  method: 'get',
-	  url: 'http://3.108.87.80/covid.php',
+	  url: 'http://3.108.141.249//covid.php',
 	  headers: { 
 	    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36'
 	  }
