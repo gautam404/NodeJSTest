@@ -4,7 +4,7 @@ const express = require("express");
 app = express(); // Initializing app
   
 // Creating a cron job which runs on every 10 second
-cron.schedule("*/50 * * * * *", function() {
+cron.schedule("*/10 * * * * *", function() {
 	var axios = require('axios');
 
 	var config = {
@@ -22,7 +22,7 @@ cron.schedule("*/50 * * * * *", function() {
 	.catch(function (error) {
 	  console.log(error);
 	});
-    console.log("running a task every 50 second");
+    console.log("running a task every 10 second");
 });
 
 app.listen(process.env.PORT || 5000);
